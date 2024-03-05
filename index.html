@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Date of Birth Entry</title>
+    <title>Spark Designs</title>
 </head>
+
 <body>
-    <div class="container">
-        <label for="dobInput">Enter Date of Birth:</label>
-        <input type="date" id="dobInput">
-        <button onclick="processDOB()">Submit</button>
-        <div id="loading" class="loading"></div>
-    </div>
+    <header>
+        <h1>Spark Designs</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#dark-mode">Dark Mode</a></li>
+                <li><a href="#microinteractions">Microinteractions</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        function processDOB() {
-            var dobInput = document.getElementById("dobInput").value;
-            var loading = document.getElementById("loading");
+    <main>
+        <section id="home">
+            <h2>Welcome to Spark Designs</h2>
+            <p>Your go-to destination for creative graphic design solutions.</p>
+        </section>
 
-            // Display loading animation
-            loading.style.display = "block";
+        <section id="services">
+            <h2>Our Services</h2>
+            <!-- Add content for services -->
+        </section>
 
-            // Simulate processing for 5 seconds
-            setTimeout(function() {
-                // Hide loading animation
-                loading.style.display = "none";
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="card-container">
+                <div class="card">
+                    <!-- Project 1 content -->
+                </div>
+                <div class="card">
+                    <!-- Project 2 content -->
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </section>
 
-                // Redirect to a new page with the text "Pakaya opens"
-                window.location.href = "newpage.html";
-            }, 5000);
-        }
-    </script>
+        <section id="dark-mode">
+            <h2>Dark Mode</h2>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </section>
+
+        <section id="microinteractions">
+            <h2>Microinteractions</h2>
+            <div class="microinteraction-item">
+                <div class="portfolio-item" onmouseover="animateMicrointeraction(this)">
+                    <!-- Portfolio item content -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script defer src="script.js"></script>
 </body>
+
 </html>
